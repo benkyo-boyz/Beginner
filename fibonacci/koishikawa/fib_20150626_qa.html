@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<title>JS課題：フィボナッチ数列</title>
+</head>
+
+<body>
+<!-- fib 0 1 1 2 3 5 8 13 21 34 55 -->
+<!-- n   0 1 2 3 4 5 6 07 08 09 10 --> 
+
+<script>
+
+
+var fib=function(n){
+	var result=1,bef1=1,bef2=1;
+	for(var i=1 ; i<n ; i++){
+		result=bef1+bef2;
+		bef2=bef1;
+		bef1=result;
+	}
+	return result;
+}
+for( var d = 1; d <= 10; d++){
+document.write(fib(d)+"<br>");
+}
+</script>
+
+</body>
+</html>
