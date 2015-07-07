@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 初期化
+===========================================================*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+	font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+nav,ul {
+    list-style:none;
+}
+
+/* clearfix */
+.cfix {
+  display: block;
+  min-height: 1%;
+}
+
+.cfix:after {
+  clear: both;
+  content:".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* アコーディオン
+===========================================================*/
+
+#acMenu{
+	margin:0 auto 30px;
+	width: 100%;
+}
+
+#acMenu dt{
+	margin:0 auto
+	display:block;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	border:#666 1px solid;
+	cursor:pointer;
+}
+
+#acMenu dd{
+	background:#c3c3c3;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	border:#666 1px solid;
+	display:none;
+}
+
+/* accordion
+===========================================================*/
+
+ul.accordion { font-size:16px; width:100%; margin:0 auto 30px;}
+ul.accordion a { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; text-decoration:none; color:#333; font-weight:bold;}
+ul.accordion span { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; color:#333; font-weight:bold;}
+ul.accordion ul { display:none;}
+ul.accordion > li { background:#3fa5f3;}
+ul.accordion > li > p { background:#3fa5f3;   border-bottom: 1px solid #EEE;}
+ul.accordion > li > ul > li { background:#999; border-bottom:1px solid #EEE;}
+ul.accordion > li > ul > li > p { background:#999;}
+ul.accordion > li > ul > li > ul > li { background:#FFF; border-bottom:1px dotted #888;}
+ul.accordion > li > ul > li > ul > li:last-child { border:none;}
+ul.accordion > li > p span { background-image:url(img/open.png);}
+ul.accordion > li > p span.open { background-image:url(img/close.png);}
