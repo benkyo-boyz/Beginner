@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>JS課題：アコーディオン</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/ac_20150706.css">
+</head>
+
+<body>
+
+<script>
+$(function(){
+	$(".ac dt").click(function(){
+		$(this).next("dd").slideToggle();
+		$(this).next("dd").siblings("dd").slideUp();
+		$(this).toggleClass("open");
+		$(this).siblings("dt").removeClass("open");
+		if($(this).hasClass("open")){
+			$(this).children("span").text("CLOSE");
+		}else{
+			$(this).children("span").text("OPEN");
+		}
+	});
+});
+</script>
+
+<dl class="ac">
+	<dt>タイトル１<span>OPEN</span></dt>
+	<dd>
+	この部分にはテキストが入ります。<br>
+	この部分にはテキストが入ります。
+	</dd>
+	<dt>タイトル２<span>OPEN</span></dt>
+	<dd>
+	この部分にはテキストが入ります。<br>
+	この部分にはテキストが入ります。
+	</dd>
+	<dt>タイトル３<span>OPEN</span></dt>
+	<dd>
+	この部分にはテキストが入ります。<br>
+	この部分にはテキストが入ります。
+	</dd>
+	<dt>タイトル４<span>OPEN</span></dt>
+	<dd>
+	この部分にはテキストが入ります。<br>
+	この部分にはテキストが入ります。
+	</dd>
+</dl>
+
+
+</body>
+</html>

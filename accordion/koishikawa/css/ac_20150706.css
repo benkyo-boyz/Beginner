@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+dl, dt, dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.ac {
+	background-color: #eee;
+	width:500px;
+	border: solid 1px #ddd;
+	border-bottom: none;
+} 
+
+.ac dt {
+	padding: 5px ;
+	border-bottom: solid 1px #ddd;
+	font-size: 16px;
+}
+.ac dt span {
+	float:right;
+	position: relative;
+	padding: 5px 32px 5px 5px;
+}
+.ac dt span:after{
+	background: url(../img/arrow_btm.png) no-repeat;
+	content: "";
+	position:absolute;
+	top: 6px;
+	right: 6px;
+	width: 23px;
+	height: 18px;
+}
+
+.ac dt.open span:after{
+	background: url(../img/arrow_top.png) no-repeat;
+}
+.ac dd{
+	border-bottom: solid 1px #ddd;
+	display: none;
+	font-size: 14px;
+	padding: 5px;
+}
