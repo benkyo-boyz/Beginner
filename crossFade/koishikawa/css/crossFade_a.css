@@ -6,8 +6,10 @@
 	height: 300px;
 	position: relative;
 }
-#slide li img {
-	left: 0;
-	top: 0;
+#slide li {
+	list-style: none;
+	display:none;
 	position: absolute;
+	top: 0;
+	left: 0;
 }
