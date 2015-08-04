@@ -33,7 +33,7 @@ li {
 
   <div id="slider">
     <ul>
-      <li><a href="#"><img src="http://dummyimage.com/300x150/000/fff" alt="" /></a></li>
+      <li><a href="#"><img src="http://dummyimage.com/300x150/c00/fff" alt="" /></a></li>
       <li><a href="#"><img src="http://dummyimage.com/300x150/333/fff" alt="" /></a></li>
       <li><a href="#"><img src="http://dummyimage.com/300x150/666/fff" alt="" /></a></li>
       <li><a href="#"><img src="http://dummyimage.com/300x150/999/fff" alt="" /></a></li>
@@ -64,21 +64,22 @@ $(window).on('load', function () {
   }
 
   $('[data-controller="prev"]').on('click', function () {
-    if(index === 4) {
-      return;
-    }
-    index++;
-    var prevVal = $list.width() * index;
-    slide(prevVal);
-  });
-
-  $('[data-controller="next"]').on('click', function () {
     if(index === 0) {
-      return;
+      index = 5;
+      //return;
     }
     index--;
     var nextVal = $list.width() * index;
     slide(nextVal);
+  });
+
+  $('[data-controller="next"]').on('click', function () {
+    if(index === 4) {
+      index = -1;
+    }
+    index++;
+    var prevVal = $list.width() * index;
+    slide(prevVal);
   });
 
 });
